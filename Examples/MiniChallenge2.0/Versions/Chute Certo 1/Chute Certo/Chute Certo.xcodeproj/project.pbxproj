@@ -1,0 +1,537 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ED2D480219361F9000911F67 /* AASMatchesGroupATableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2D480019361F9000911F67 /* AASMatchesGroupATableViewCell.m */; };
+		ED2D480319361F9000911F67 /* AASMatchesGroupATableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED2D480119361F9000911F67 /* AASMatchesGroupATableViewCell.xib */; };
+		ED2D48081936338300911F67 /* AASMatchGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2D48061936338300911F67 /* AASMatchGameViewController.m */; };
+		ED2D48091936338300911F67 /* AASMatchGameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED2D48071936338300911F67 /* AASMatchGameViewController.xib */; };
+		ED94CCD81934FC8E0088EB75 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED94CCD71934FC8E0088EB75 /* Foundation.framework */; };
+		ED94CCDA1934FC8E0088EB75 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED94CCD91934FC8E0088EB75 /* CoreGraphics.framework */; };
+		ED94CCDC1934FC8E0088EB75 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED94CCDB1934FC8E0088EB75 /* UIKit.framework */; };
+		ED94CCE21934FC8E0088EB75 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ED94CCE01934FC8E0088EB75 /* InfoPlist.strings */; };
+		ED94CCE41934FC8E0088EB75 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ED94CCE31934FC8E0088EB75 /* main.m */; };
+		ED94CCE81934FC8E0088EB75 /* AASAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ED94CCE71934FC8E0088EB75 /* AASAppDelegate.m */; };
+		ED94CCEA1934FC8E0088EB75 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED94CCE91934FC8E0088EB75 /* Images.xcassets */; };
+		ED94CCF11934FC8E0088EB75 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED94CCF01934FC8E0088EB75 /* XCTest.framework */; };
+		ED94CCF21934FC8E0088EB75 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED94CCD71934FC8E0088EB75 /* Foundation.framework */; };
+		ED94CCF31934FC8E0088EB75 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED94CCDB1934FC8E0088EB75 /* UIKit.framework */; };
+		ED94CCFB1934FC8E0088EB75 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ED94CCF91934FC8E0088EB75 /* InfoPlist.strings */; };
+		ED94CCFD1934FC8E0088EB75 /* Chute_CertoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ED94CCFC1934FC8E0088EB75 /* Chute_CertoTests.m */; };
+		EDA1222D193501DE00300132 /* AASMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDA1222B193501DE00300132 /* AASMainViewController.m */; };
+		EDA1222E193501DE00300132 /* AASMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDA1222C193501DE00300132 /* AASMainViewController.xib */; };
+		EDA1223C19351B0300300132 /* AASMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = EDA1223B19351B0300300132 /* AASMainView.m */; };
+		EDA1224019351D3C00300132 /* AASMatchesView.m in Sources */ = {isa = PBXBuildFile; fileRef = EDA1223F19351D3C00300132 /* AASMatchesView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ED94CCF41934FC8E0088EB75 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED94CCCC1934FC8E0088EB75 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ED94CCD31934FC8E0088EB75;
+			remoteInfo = "Chute Certo";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		ED2D47FF19361F9000911F67 /* AASMatchesGroupATableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AASMatchesGroupATableViewCell.h; sourceTree = "<group>"; };
+		ED2D480019361F9000911F67 /* AASMatchesGroupATableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AASMatchesGroupATableViewCell.m; sourceTree = "<group>"; };
+		ED2D480119361F9000911F67 /* AASMatchesGroupATableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AASMatchesGroupATableViewCell.xib; sourceTree = "<group>"; };
+		ED2D48051936338300911F67 /* AASMatchGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AASMatchGameViewController.h; sourceTree = "<group>"; };
+		ED2D48061936338300911F67 /* AASMatchGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AASMatchGameViewController.m; sourceTree = "<group>"; };
+		ED2D48071936338300911F67 /* AASMatchGameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AASMatchGameViewController.xib; sourceTree = "<group>"; };
+		ED94CCD41934FC8E0088EB75 /* Chute Certo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chute Certo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED94CCD71934FC8E0088EB75 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		ED94CCD91934FC8E0088EB75 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		ED94CCDB1934FC8E0088EB75 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		ED94CCDF1934FC8E0088EB75 /* Chute Certo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Chute Certo-Info.plist"; sourceTree = "<group>"; };
+		ED94CCE11934FC8E0088EB75 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		ED94CCE31934FC8E0088EB75 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		ED94CCE51934FC8E0088EB75 /* Chute Certo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Chute Certo-Prefix.pch"; sourceTree = "<group>"; };
+		ED94CCE61934FC8E0088EB75 /* AASAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AASAppDelegate.h; sourceTree = "<group>"; };
+		ED94CCE71934FC8E0088EB75 /* AASAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AASAppDelegate.m; sourceTree = "<group>"; };
+		ED94CCE91934FC8E0088EB75 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		ED94CCEF1934FC8E0088EB75 /* Chute CertoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Chute CertoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED94CCF01934FC8E0088EB75 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		ED94CCF81934FC8E0088EB75 /* Chute CertoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Chute CertoTests-Info.plist"; sourceTree = "<group>"; };
+		ED94CCFA1934FC8E0088EB75 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		ED94CCFC1934FC8E0088EB75 /* Chute_CertoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Chute_CertoTests.m; sourceTree = "<group>"; };
+		EDA1222A193501DE00300132 /* AASMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AASMainViewController.h; sourceTree = "<group>"; };
+		EDA1222B193501DE00300132 /* AASMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AASMainViewController.m; sourceTree = "<group>"; };
+		EDA1222C193501DE00300132 /* AASMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AASMainViewController.xib; sourceTree = "<group>"; };
+		EDA1223A19351B0300300132 /* AASMainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AASMainView.h; sourceTree = "<group>"; };
+		EDA1223B19351B0300300132 /* AASMainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AASMainView.m; sourceTree = "<group>"; };
+		EDA1223E19351D3C00300132 /* AASMatchesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AASMatchesView.h; sourceTree = "<group>"; };
+		EDA1223F19351D3C00300132 /* AASMatchesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AASMatchesView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ED94CCD11934FC8E0088EB75 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED94CCDA1934FC8E0088EB75 /* CoreGraphics.framework in Frameworks */,
+				ED94CCDC1934FC8E0088EB75 /* UIKit.framework in Frameworks */,
+				ED94CCD81934FC8E0088EB75 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED94CCEC1934FC8E0088EB75 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED94CCF11934FC8E0088EB75 /* XCTest.framework in Frameworks */,
+				ED94CCF31934FC8E0088EB75 /* UIKit.framework in Frameworks */,
+				ED94CCF21934FC8E0088EB75 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ED2D48041936336400911F67 /* MatchGameViewController */ = {
+			isa = PBXGroup;
+			children = (
+				ED2D48051936338300911F67 /* AASMatchGameViewController.h */,
+				ED2D48061936338300911F67 /* AASMatchGameViewController.m */,
+				ED2D48071936338300911F67 /* AASMatchGameViewController.xib */,
+			);
+			name = MatchGameViewController;
+			sourceTree = "<group>";
+		};
+		ED94CCCB1934FC8E0088EB75 = {
+			isa = PBXGroup;
+			children = (
+				ED94CCDD1934FC8E0088EB75 /* Chute Certo */,
+				ED94CCF61934FC8E0088EB75 /* Chute CertoTests */,
+				ED94CCD61934FC8E0088EB75 /* Frameworks */,
+				ED94CCD51934FC8E0088EB75 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ED94CCD51934FC8E0088EB75 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ED94CCD41934FC8E0088EB75 /* Chute Certo.app */,
+				ED94CCEF1934FC8E0088EB75 /* Chute CertoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ED94CCD61934FC8E0088EB75 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ED94CCD71934FC8E0088EB75 /* Foundation.framework */,
+				ED94CCD91934FC8E0088EB75 /* CoreGraphics.framework */,
+				ED94CCDB1934FC8E0088EB75 /* UIKit.framework */,
+				ED94CCF01934FC8E0088EB75 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ED94CCDD1934FC8E0088EB75 /* Chute Certo */ = {
+			isa = PBXGroup;
+			children = (
+				ED2D48041936336400911F67 /* MatchGameViewController */,
+				EDA1223D19351D0900300132 /* MatchsView */,
+				EDA1223919351AE700300132 /* MainView */,
+				EDA12229193501CC00300132 /* MainViewController */,
+				EDA12228193501C400300132 /* AppDelegate */,
+				ED94CCE91934FC8E0088EB75 /* Images.xcassets */,
+				ED94CCDE1934FC8E0088EB75 /* Supporting Files */,
+			);
+			path = "Chute Certo";
+			sourceTree = "<group>";
+		};
+		ED94CCDE1934FC8E0088EB75 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ED94CCDF1934FC8E0088EB75 /* Chute Certo-Info.plist */,
+				ED94CCE01934FC8E0088EB75 /* InfoPlist.strings */,
+				ED94CCE31934FC8E0088EB75 /* main.m */,
+				ED94CCE51934FC8E0088EB75 /* Chute Certo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ED94CCF61934FC8E0088EB75 /* Chute CertoTests */ = {
+			isa = PBXGroup;
+			children = (
+				ED94CCFC1934FC8E0088EB75 /* Chute_CertoTests.m */,
+				ED94CCF71934FC8E0088EB75 /* Supporting Files */,
+			);
+			path = "Chute CertoTests";
+			sourceTree = "<group>";
+		};
+		ED94CCF71934FC8E0088EB75 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ED94CCF81934FC8E0088EB75 /* Chute CertoTests-Info.plist */,
+				ED94CCF91934FC8E0088EB75 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EDA12228193501C400300132 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				ED94CCE61934FC8E0088EB75 /* AASAppDelegate.h */,
+				ED94CCE71934FC8E0088EB75 /* AASAppDelegate.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		EDA12229193501CC00300132 /* MainViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EDA1222A193501DE00300132 /* AASMainViewController.h */,
+				EDA1222B193501DE00300132 /* AASMainViewController.m */,
+				EDA1222C193501DE00300132 /* AASMainViewController.xib */,
+			);
+			name = MainViewController;
+			sourceTree = "<group>";
+		};
+		EDA1223919351AE700300132 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				EDA1223A19351B0300300132 /* AASMainView.h */,
+				EDA1223B19351B0300300132 /* AASMainView.m */,
+			);
+			name = MainView;
+			sourceTree = "<group>";
+		};
+		EDA1223D19351D0900300132 /* MatchsView */ = {
+			isa = PBXGroup;
+			children = (
+				EDA1223E19351D3C00300132 /* AASMatchesView.h */,
+				EDA1223F19351D3C00300132 /* AASMatchesView.m */,
+				ED2D47FF19361F9000911F67 /* AASMatchesGroupATableViewCell.h */,
+				ED2D480019361F9000911F67 /* AASMatchesGroupATableViewCell.m */,
+				ED2D480119361F9000911F67 /* AASMatchesGroupATableViewCell.xib */,
+			);
+			name = MatchsView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ED94CCD31934FC8E0088EB75 /* Chute Certo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED94CD001934FC8E0088EB75 /* Build configuration list for PBXNativeTarget "Chute Certo" */;
+			buildPhases = (
+				ED94CCD01934FC8E0088EB75 /* Sources */,
+				ED94CCD11934FC8E0088EB75 /* Frameworks */,
+				ED94CCD21934FC8E0088EB75 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Chute Certo";
+			productName = "Chute Certo";
+			productReference = ED94CCD41934FC8E0088EB75 /* Chute Certo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ED94CCEE1934FC8E0088EB75 /* Chute CertoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED94CD031934FC8E0088EB75 /* Build configuration list for PBXNativeTarget "Chute CertoTests" */;
+			buildPhases = (
+				ED94CCEB1934FC8E0088EB75 /* Sources */,
+				ED94CCEC1934FC8E0088EB75 /* Frameworks */,
+				ED94CCED1934FC8E0088EB75 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ED94CCF51934FC8E0088EB75 /* PBXTargetDependency */,
+			);
+			name = "Chute CertoTests";
+			productName = "Chute CertoTests";
+			productReference = ED94CCEF1934FC8E0088EB75 /* Chute CertoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ED94CCCC1934FC8E0088EB75 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = AAS;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Arthur Augusto";
+				TargetAttributes = {
+					ED94CCEE1934FC8E0088EB75 = {
+						TestTargetID = ED94CCD31934FC8E0088EB75;
+					};
+				};
+			};
+			buildConfigurationList = ED94CCCF1934FC8E0088EB75 /* Build configuration list for PBXProject "Chute Certo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = ED94CCCB1934FC8E0088EB75;
+			productRefGroup = ED94CCD51934FC8E0088EB75 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ED94CCD31934FC8E0088EB75 /* Chute Certo */,
+				ED94CCEE1934FC8E0088EB75 /* Chute CertoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ED94CCD21934FC8E0088EB75 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED94CCE21934FC8E0088EB75 /* InfoPlist.strings in Resources */,
+				ED2D48091936338300911F67 /* AASMatchGameViewController.xib in Resources */,
+				ED2D480319361F9000911F67 /* AASMatchesGroupATableViewCell.xib in Resources */,
+				ED94CCEA1934FC8E0088EB75 /* Images.xcassets in Resources */,
+				EDA1222E193501DE00300132 /* AASMainViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED94CCED1934FC8E0088EB75 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED94CCFB1934FC8E0088EB75 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ED94CCD01934FC8E0088EB75 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED94CCE81934FC8E0088EB75 /* AASAppDelegate.m in Sources */,
+				ED2D48081936338300911F67 /* AASMatchGameViewController.m in Sources */,
+				EDA1223C19351B0300300132 /* AASMainView.m in Sources */,
+				EDA1222D193501DE00300132 /* AASMainViewController.m in Sources */,
+				ED94CCE41934FC8E0088EB75 /* main.m in Sources */,
+				EDA1224019351D3C00300132 /* AASMatchesView.m in Sources */,
+				ED2D480219361F9000911F67 /* AASMatchesGroupATableViewCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED94CCEB1934FC8E0088EB75 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED94CCFD1934FC8E0088EB75 /* Chute_CertoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ED94CCF51934FC8E0088EB75 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ED94CCD31934FC8E0088EB75 /* Chute Certo */;
+			targetProxy = ED94CCF41934FC8E0088EB75 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		ED94CCE01934FC8E0088EB75 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ED94CCE11934FC8E0088EB75 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		ED94CCF91934FC8E0088EB75 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ED94CCFA1934FC8E0088EB75 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ED94CCFE1934FC8E0088EB75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		ED94CCFF1934FC8E0088EB75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ED94CD011934FC8E0088EB75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Chute Certo/Chute Certo-Prefix.pch";
+				INFOPLIST_FILE = "Chute Certo/Chute Certo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		ED94CD021934FC8E0088EB75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Chute Certo/Chute Certo-Prefix.pch";
+				INFOPLIST_FILE = "Chute Certo/Chute Certo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		ED94CD041934FC8E0088EB75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Chute Certo.app/Chute Certo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Chute Certo/Chute Certo-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Chute CertoTests/Chute CertoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		ED94CD051934FC8E0088EB75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Chute Certo.app/Chute Certo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Chute Certo/Chute Certo-Prefix.pch";
+				INFOPLIST_FILE = "Chute CertoTests/Chute CertoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ED94CCCF1934FC8E0088EB75 /* Build configuration list for PBXProject "Chute Certo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED94CCFE1934FC8E0088EB75 /* Debug */,
+				ED94CCFF1934FC8E0088EB75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED94CD001934FC8E0088EB75 /* Build configuration list for PBXNativeTarget "Chute Certo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED94CD011934FC8E0088EB75 /* Debug */,
+				ED94CD021934FC8E0088EB75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED94CD031934FC8E0088EB75 /* Build configuration list for PBXNativeTarget "Chute CertoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED94CD041934FC8E0088EB75 /* Debug */,
+				ED94CD051934FC8E0088EB75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ED94CCCC1934FC8E0088EB75 /* Project object */;
+}

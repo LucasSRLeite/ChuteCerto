@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>6563FE92-9EF5-4B0F-9F7B-69FBFF8849E3</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ScrollView Challenge 1</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>7D24ECD4-9D6B-4DD6-A7EC-CA21544B3A63</key>
+		<string>https://github.com/adoradorimaa/BEPiD</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>May/Week 19 - 23/ScrollView/ScrollView Challenge 1/ScrollView Challenge 1.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>7D24ECD4-9D6B-4DD6-A7EC-CA21544B3A63</key>
+		<string>../../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/adoradorimaa/BEPiD</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>7D24ECD4-9D6B-4DD6-A7EC-CA21544B3A63</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>7D24ECD4-9D6B-4DD6-A7EC-CA21544B3A63</string>
+			<key>IDESourceControlWCCName</key>
+			<string>BEPiD</string>
+		</dict>
+	</array>
+</dict>
+</plist>
