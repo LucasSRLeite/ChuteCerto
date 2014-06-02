@@ -27,7 +27,6 @@
 		ED94CCFB1934FC8E0088EB75 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ED94CCF91934FC8E0088EB75 /* InfoPlist.strings */; };
 		ED94CCFD1934FC8E0088EB75 /* Chute_CertoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ED94CCFC1934FC8E0088EB75 /* Chute_CertoTests.m */; };
 		EDA098D6193CC394001485D1 /* AASKick.m in Sources */ = {isa = PBXBuildFile; fileRef = EDA098D5193CC394001485D1 /* AASKick.m */; };
-		EDA098DA193CC41B001485D1 /* CoraDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EDA098D8193CC41B001485D1 /* CoraDataModel.xcdatamodeld */; };
 		EDA1222D193501DE00300132 /* AASMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDA1222B193501DE00300132 /* AASMainViewController.m */; };
 		EDA1222E193501DE00300132 /* AASMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDA1222C193501DE00300132 /* AASMainViewController.xib */; };
 		EDA1223C19351B0300300132 /* AASMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = EDA1223B19351B0300300132 /* AASMainView.m */; };
@@ -79,7 +78,6 @@
 		ED94CCFC1934FC8E0088EB75 /* Chute_CertoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Chute_CertoTests.m; sourceTree = "<group>"; };
 		EDA098D4193CC394001485D1 /* AASKick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AASKick.h; sourceTree = "<group>"; };
 		EDA098D5193CC394001485D1 /* AASKick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AASKick.m; sourceTree = "<group>"; };
-		EDA098D9193CC41B001485D1 /* CoraDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoraDataModel.xcdatamodel; sourceTree = "<group>"; };
 		EDA1222A193501DE00300132 /* AASMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AASMainViewController.h; sourceTree = "<group>"; };
 		EDA1222B193501DE00300132 /* AASMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AASMainViewController.m; sourceTree = "<group>"; };
 		EDA1222C193501DE00300132 /* AASMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AASMainViewController.xib; sourceTree = "<group>"; };
@@ -189,7 +187,6 @@
 		ED94CCDD1934FC8E0088EB75 /* Chute Certo */ = {
 			isa = PBXGroup;
 			children = (
-				EDA098D7193CC3EF001485D1 /* CoreData */,
 				EDC15A7119372ABC00126E1F /* ModelClasses */,
 				ED2D480D19365D9C00911F67 /* LoginViewControllers */,
 				ED2D48041936336400911F67 /* MatchGameViewController */,
@@ -230,14 +227,6 @@
 				ED94CCF91934FC8E0088EB75 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		EDA098D7193CC3EF001485D1 /* CoreData */ = {
-			isa = PBXGroup;
-			children = (
-				EDA098D8193CC41B001485D1 /* CoraDataModel.xcdatamodeld */,
-			);
-			name = CoreData;
 			sourceTree = "<group>";
 		};
 		EDA12228193501C400300132 /* AppDelegate */ = {
@@ -418,7 +407,6 @@
 				ED94CCE81934FC8E0088EB75 /* AASAppDelegate.m in Sources */,
 				ED2D48081936338300911F67 /* AASMatchGameViewController.m in Sources */,
 				EDA1223C19351B0300300132 /* AASMainView.m in Sources */,
-				EDA098DA193CC41B001485D1 /* CoraDataModel.xcdatamodeld in Sources */,
 				EDA1222D193501DE00300132 /* AASMainViewController.m in Sources */,
 				EDC15A7419372AD400126E1F /* AASUser.m in Sources */,
 				ED2D48141936639300911F67 /* AASLoginViewController.m in Sources */,
@@ -644,19 +632,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		EDA098D8193CC41B001485D1 /* CoraDataModel.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				EDA098D9193CC41B001485D1 /* CoraDataModel.xcdatamodel */,
-			);
-			currentVersion = EDA098D9193CC41B001485D1 /* CoraDataModel.xcdatamodel */;
-			path = CoraDataModel.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = ED94CCCC1934FC8E0088EB75 /* Project object */;
 }
