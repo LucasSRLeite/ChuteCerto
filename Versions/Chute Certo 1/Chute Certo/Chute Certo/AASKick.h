@@ -16,7 +16,7 @@
 
 @property (nonatomic) NSDate * date;
 
-@property (nonatomic) NSInteger scoreTeam1;
-@property (nonatomic) NSInteger scoreTeam2;
+@property (nonatomic) NSString * scoreTeam1;
+@property (nonatomic) NSString * scoreTeam2;
 
 @end
