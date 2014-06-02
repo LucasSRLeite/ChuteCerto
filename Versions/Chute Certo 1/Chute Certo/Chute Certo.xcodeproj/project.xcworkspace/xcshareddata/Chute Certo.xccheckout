@@ -5,36 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>DFCF98F8-F692-4B99-80D8-1B6D9059EC96</string>
+	<string>D9897220-F091-4174-B579-892C3E7AEB7F</string>
 	<key>IDESourceControlProjectName</key>
 	<string>Chute Certo</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>C1E15738-BFFC-4E22-A980-2D9D7329DE6D</key>
-		<string>https://github.com/adoradorimaa/Chute-Certo</string>
+		<key>894E262F-ADAC-4028-ACEB-51B6385EEA75</key>
+		<string>https://github.com/LucasSRLeite/ChuteCerto</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Versions/Chute Certo 1/Chute Certo/Chute Certo.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>C1E15738-BFFC-4E22-A980-2D9D7329DE6D</key>
+		<key>894E262F-ADAC-4028-ACEB-51B6385EEA75</key>
 		<string>../../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/adoradorimaa/Chute-Certo</string>
+	<string>https://github.com/LucasSRLeite/ChuteCerto</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>C1E15738-BFFC-4E22-A980-2D9D7329DE6D</string>
+	<string>894E262F-ADAC-4028-ACEB-51B6385EEA75</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>C1E15738-BFFC-4E22-A980-2D9D7329DE6D</string>
+			<string>894E262F-ADAC-4028-ACEB-51B6385EEA75</string>
 			<key>IDESourceControlWCCName</key>
-			<string>Chute-Certo</string>
+			<string>ChuteCerto</string>
 		</dict>
 	</array>
 </dict>
