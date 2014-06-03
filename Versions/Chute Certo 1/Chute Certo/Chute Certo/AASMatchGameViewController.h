@@ -12,6 +12,8 @@
 
 @property int scoreOne, scoreTwo;
 
+@property (nonatomic) NSMutableArray * dataList;
+
 @property (nonatomic) BOOL isGame1Detailed;
 @property (nonatomic) BOOL isGame2Detailed;
 

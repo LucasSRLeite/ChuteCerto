@@ -118,7 +118,11 @@
 
 - (IBAction)toolbarKickAction:(UIBarButtonItem *)sender {
     AASMainViewController * viewController = [[AASMainViewController alloc] init];
+
+    NSString *path = [NSHomeDirectory() stringByAppendingString:@"/dados.plist"];
     
+    NSLog(@"%@", path);
+
     viewController.scoreOne = self.scoreOne;
     viewController.scoreTwo = self.scoreTwo;
     viewController.group = [self.labelGroupText characterAtIndex:6];
@@ -131,6 +135,24 @@
     [viewController.scrollViewMain addSubview: viewController.matchesView];
     
     viewController.indexScrollToView = 1;
+    
+    NSError *error;
+    
+    self.dataList = [[NSMutableArray alloc]initWithContentsOfFile:path];
+    
+    if (!self.dataList) {
+        NSLog(@"%@", self.labelGroupText);
+        self.dataList = [[NSMutableArray alloc]init];
+    }
+    
+    NSMutableDictionary *dados = [[NSMutableDictionary alloc]init];
+    
+    [dados setObject:[NSString stringWithFormat: @"%d X %d", self.scoreOne, self.scoreTwo] forKey:self.labelGroupText];
+    
+    [self.dataList addObject:dados];
+    [self.dataList writeToFile:path atomically:YES];
+    
+    NSLog(@"%@", self.dataList);
     
     [[[[UIApplication sharedApplication] delegate] window] setRootViewController:viewController];
 }
