@@ -54,14 +54,44 @@
     labelGroup.text = self.labelGroupText;
     [labelGroup setTextAlignment:NSTextAlignmentCenter];
     [self.view addSubview:labelGroup];
+
+    self.labelTeam1 = [[UILabel alloc] initWithFrame:CGRectMake(0, 79, self.view.bounds.size.width/2, 35)];
+    self.labelTeam1.text = self.team1;
+    [self.labelTeam1 setTextAlignment:NSTextAlignmentCenter];
+    [self.view addSubview:self.labelTeam1];
+
+    self.labelTeam2 = [[UILabel alloc] initWithFrame:CGRectMake(self.view.bounds.size.width/2, 79, self.view.bounds.size.width/2, 35)];
+    self.labelTeam2.text = self.team2;
+    [self.labelTeam2 setTextAlignment:NSTextAlignmentCenter];
+    [self.view addSubview:self.labelTeam2];
     
-    UIImageView * teamFlagOne = [[UIImageView alloc] initWithFrame:CGRectMake(0, 106, 161, 128)];
+    CGRect screen = self.view.bounds;
+    CGRect fullScreen = screen;
+    fullScreen.size.width *= 2.0;
+    
+    self.scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 106, screen.size.width, 128)];
+    [self.scrollView setContentSize: CGRectMake(0, 106, fullScreen.size.width, 128).size];
+    
+    UIImageView * teamFlagOne = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 161, 128)];
     teamFlagOne.image = [UIImage imageNamed:self.flagOneImagePath];
-    [self.view addSubview:teamFlagOne];
+    [self.scrollView addSubview:teamFlagOne];
     
-    UIImageView * teamFlagTwo = [[UIImageView alloc] initWithFrame:CGRectMake(161, 106, 161, 128)];
+    UIImageView * teamFlagTwo = [[UIImageView alloc] initWithFrame:CGRectMake(161, 0, 161, 128)];
     teamFlagTwo.image = [UIImage imageNamed:self.flagTwoImagePath];
-    [self.view addSubview:teamFlagTwo];
+    [self.scrollView addSubview:teamFlagTwo];
+    
+    UIImageView * teamFlagThree = [[UIImageView alloc] initWithFrame:CGRectMake(161*2, 0, 161, 128)];
+    teamFlagThree.image = [UIImage imageNamed:self.flagThreeImagePath];
+    [self.scrollView addSubview:teamFlagThree];
+    
+    UIImageView * teamFlagFour = [[UIImageView alloc] initWithFrame:CGRectMake(161*3, 0, 161, 128)];
+    teamFlagFour.image = [UIImage imageNamed:self.flagFourImagePath];
+    [self.scrollView addSubview:teamFlagFour];
+    
+    self.scrollView.delegate = self;
+    self.scrollView.pagingEnabled = YES;
+    self.scrollView.backgroundColor = [UIColor clearColor];
+    [self.view addSubview:self.scrollView];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -133,6 +163,18 @@
     viewController.indexScrollToView = 1;
     
     [[[[UIApplication sharedApplication] delegate] window] setRootViewController:viewController];
+}
+
+#pragma mark - MyMethods
+
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    if (self.scrollView.contentOffset.x == 0) {
+        self.labelTeam1.text = self.team1;
+        self.labelTeam2.text = self.team2;
+    } else if (self.scrollView.contentOffset.x == self.view.bounds.size.width) {
+        self.labelTeam1.text = self.team3;
+        self.labelTeam2.text = self.team4;
+    }
 }
 
 @end

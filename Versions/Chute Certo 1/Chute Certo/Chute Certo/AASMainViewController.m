@@ -35,6 +35,11 @@
     
     [self ableScrollViewGestures];
     
+    self.viewMenu.hidden = YES;
+    self.tableViewMenu.backgroundColor = [UIColor clearColor];
+    self.arrayTableViewMenuData = [NSMutableArray arrayWithObjects:@"Configuraçōes", @"Perfil",
+                               @"Meus Chutes", @"Ranking", @"Tutorial", nil];
+    
     self.scrollViewMain.delegate = self;
     
     if (self.user == nil) {
@@ -134,6 +139,44 @@
     }];
 }
 
+#pragma mark - TableView Methods
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [self.arrayTableViewMenuData count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString * simpleTableIdentifier = @"SimpleTableItem";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+    }
+    
+    cell.backgroundColor = [UIColor clearColor];
+    cell.textLabel.text = [self.arrayTableViewMenuData objectAtIndex:indexPath.row];
+    cell.textLabel.textColor = [UIColor whiteColor];
+    
+    switch (indexPath.row) {
+        case 0:
+            /* cell.imageView.image = [UIImage imageNamed:@"Sum Operation Icon.png"];
+            if (cell.selected) {
+                self.labelMathOperationQuestion.text = @"SUM";
+                self.mathOperation = 0;
+            }
+            break;*/
+        case 1 :
+            break;
+        case 2 :
+            break;
+    }
+    
+    return cell;
+}
+
+
+
 #pragma mark - MyMethods
 
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView {
@@ -149,6 +192,11 @@
     } else if (self.scrollViewMain.contentOffset.x == self.view.bounds.size.width*3) {
         self.toolbarMainTitle.title = @"Profile";
         [self manageToolbarSelectedColor : 4];
+        AASRegisterViewController * viewController = [[AASRegisterViewController alloc] init];
+        
+        [self presentViewController:viewController animated:YES completion: ^{
+            self.user = viewController.user;
+        }];
     }
 }
 
@@ -172,4 +220,21 @@
     }
 }
 
+- (IBAction)toolbarMenuAction:(UIBarButtonItem *)sender {
+    if (self.viewMenu.hidden) {
+        self.viewMenu.hidden = NO;
+        [UIView beginAnimations:@"animation1" context:nil];
+        [UIView setAnimationCurve:UIViewAnimationCurveLinear];
+        [UIView setAnimationDuration: 0.2];
+        [UIView setAnimationTransition:UIViewAnimationTransitionCurlDown forView:self.viewMenu cache:NO];
+        [UIView commitAnimations];
+    } else {
+        self.viewMenu.hidden = YES;
+        [UIView beginAnimations:@"animation2" context:nil];
+        [UIView setAnimationCurve:UIViewAnimationCurveLinear];
+        [UIView setAnimationDuration: 0.2];
+        [UIView setAnimationTransition:UIViewAnimationTransitionCurlUp forView:self.viewMenu cache:NO];
+        [UIView commitAnimations];
+    }
+}
 @end

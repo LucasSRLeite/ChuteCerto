@@ -50,7 +50,6 @@
 - (IBAction)segmentedControlGame2Action:(UISegmentedControl *)sender;
 
 - (IBAction)buttonMatchOneAtion:(UIButton *)sender;
-- (IBAction)buttonMatchTwoAction:(UIButton *)sender;
 
 - (void) showGameDetails : (BOOL) isMatchOne;
 

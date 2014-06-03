@@ -11,7 +11,7 @@
 #import "AASMatchesView.h"
 #import "AASUser.h"
 
-@interface AASMainViewController : UIViewController <UIScrollViewDelegate>
+@interface AASMainViewController : UIViewController <UIScrollViewDelegate, UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *toolbarMainTitle;
 
@@ -19,6 +19,10 @@
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *toolbarHomeValue;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *toolbarRankingValue;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *toolbarProfileValue;
+@property (weak, nonatomic) IBOutlet UIView *viewMenu;
+
+@property (weak, nonatomic) IBOutlet UITableView *tableViewMenu;
+@property (nonatomic) NSMutableArray * arrayTableViewMenuData;
 
 @property (nonatomic) AASUser * user;
 
@@ -44,5 +48,6 @@
 - (IBAction)toolbarHomeAction:(UIBarButtonItem *)sender;
 - (IBAction)toolbarRankingAction:(UIBarButtonItem *)sender;
 - (IBAction)toolbarProfileAction:(UIBarButtonItem *)sender;
+- (IBAction)toolbarMenuAction:(UIBarButtonItem *)sender;
 
 @end

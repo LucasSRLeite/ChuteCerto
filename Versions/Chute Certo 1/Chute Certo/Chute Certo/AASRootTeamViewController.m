@@ -39,21 +39,21 @@
         self.arrayTeam = [[NSMutableArray alloc] init];
     }
     
-    self.pickerViewGolderPlayer = [[UIPickerView alloc] init];
+    self.pickerViewGoldenPlayer = [[UIPickerView alloc] init];
     
-    [self.pickerViewGolderPlayer setDataSource: self];
-    [self.pickerViewGolderPlayer setDelegate: self];
+    [self.pickerViewGoldenPlayer setDataSource: self];
+    [self.pickerViewGoldenPlayer setDelegate: self];
     
-    [self.pickerViewGolderPlayer setFrame: CGRectMake(self.view.bounds.size.width/2-100, self.view.bounds.size.height-200, 200, 162.0)];
+    [self.pickerViewGoldenPlayer setFrame: CGRectMake(self.view.bounds.size.width/2-150, self.view.bounds.size.height-200, 300, 162.0)];
     
-    self.pickerViewGolderPlayer.showsSelectionIndicator = YES;
+    self.pickerViewGoldenPlayer.showsSelectionIndicator = YES;
     
-    [self.pickerViewGolderPlayer selectRow:0 inComponent:0 animated:YES];
+    [self.pickerViewGoldenPlayer selectRow:0 inComponent:0 animated:YES];
     
-    [self.view addSubview: self.pickerViewGolderPlayer];
+    [self.view addSubview: self.pickerViewGoldenPlayer];
     
-    self.pickerViewGolderPlayer.backgroundColor = [UIColor clearColor];
-    self.pickerViewGolderPlayer.hidden = YES;
+    self.pickerViewGoldenPlayer.backgroundColor = [UIColor clearColor];
+    self.pickerViewGoldenPlayer.hidden = YES;
     
     [self addFlagsInScrollView];
     
@@ -84,7 +84,7 @@
 }
 
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
-    return 11;
+    return 23;
 }
 
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
@@ -104,10 +104,12 @@
     return title;
 }
 
--(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
-    /*if (pickerView == self.pickerViewGolderPlayer) {
 
-    } */
+
+-(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
+    if (pickerView == self.pickerViewGoldenPlayer) {
+
+    }
 }
 
 #pragma mark - Toolbar Methods
@@ -115,11 +117,11 @@
 - (IBAction)toolbarChooseAction:(UIBarButtonItem *)sender {
     if ([[self.arrayTeam objectAtIndex:0] players] != nil) {
         self.textViewTitle.text = @"Chute Bola de Ouro\n(Melhor jogador da Copa)";
-        self.pickerViewGolderPlayer.hidden = NO;
+        self.pickerViewGoldenPlayer.hidden = NO;
         self.toolbarAddValue.enabled = YES;
     } else {
         self.textViewTitle.text = @"Chute Chuteira de Ouro\n(Artilheiro jogador da Copa)";
-        self.pickerViewGolderPlayer.hidden = NO;
+        self.pickerViewGoldenPlayer.hidden = NO;
         self.toolbarAddValue.enabled = YES;
     }
 }
@@ -171,10 +173,11 @@
             break;
         case 2 :
             team.name = @"Algeria";
-            team.players = [self addBrasilPlayers];
+            team.players = [self addAlgeriaPlayers];
             break;
         case 3 :
             team.name = @"Argentina";
+            team.players = [self addArgentinaPlayers];
             break;
         case 4 :
             team.name = @"Austrália";
@@ -238,10 +241,10 @@
             team.name = @"Inglaterra";
             break;
         case 24 :
-            team.name = @"Itália";
+            team.name = @"Irã";
             break;
         case 25 :
-            team.name = @"Irã";
+            team.name = @"Itália";
             break;
         case 26 :
             team.name = @"Japão";
@@ -272,17 +275,89 @@
 - (NSMutableArray *) addGermanyPlayers {
     NSMutableArray * players = [[NSMutableArray alloc] init];
     
-    [players addObject:@"Neuer"];
-    [players addObject:@"Metesacker"];
-    [players addObject:@"Boateng"];
-    [players addObject:@"Lahm"];
-    [players addObject:@"Hummels"];
-    [players addObject:@"Swainstaiger"];
-    [players addObject:@"Kedira"];
-    [players addObject:@"Ozil"];
-    [players addObject:@"Gotze"];
-    [players addObject:@"Klose"];
-    [players addObject:@"Muller"];
+    [players addObject:@"Manuel Neuer"];
+    [players addObject:@"Weidenfeller"];
+    [players addObject:@"Ron-Robert Zieler"];
+    [players addObject:@"Jerome Boateng"];
+    [players addObject:@"Erik Durm"];
+    [players addObject:@"Kevin Grosskreutz"];
+    [players addObject:@"Benedikt Howedes"];
+    [players addObject:@"Mats Hummels"];
+    [players addObject:@"Philipp Lahm"];
+    [players addObject:@"Per Mertesacker"];
+    [players addObject:@"Julian Draxler"];
+    [players addObject:@"Matthias Ginter"];
+    [players addObject:@"Mario Gotze"];
+    [players addObject:@"Christoph Kramer"];
+    [players addObject:@"Sami Khedira"];
+    [players addObject:@"Toni Kroos"];
+    [players addObject:@"Thomas Muller "];
+    [players addObject:@"Mesut Ozil"];
+    [players addObject:@"Marco Reus"];
+    [players addObject:@"Andre Schurrle"];
+    [players addObject:@"Schweinsteiger"];
+    [players addObject:@"Miroslav Klose"];
+    [players addObject:@"Lukas Podolski"];
+    
+    return players;
+}
+
+- (NSMutableArray *) addAlgeriaPlayers {
+    NSMutableArray * players = [[NSMutableArray alloc] init];
+    
+    [players addObject:@"Rais Mbolhi"];
+    [players addObject:@"Cedric Si Mohamed"];
+    [players addObject:@"Mohamed Lamine Zemmamouche"];
+    [players addObject:@"Essaid Belkalem"];
+    [players addObject:@"Madjid Bougherra"];
+    [players addObject:@"Liassine Cadamuro"];
+    [players addObject:@"Faouzi Ghoualm"];
+    [players addObject:@"Rafik Halliche"];
+    [players addObject:@"Aissa Mandi"];
+    [players addObject:@"Carl Medjani"];
+    [players addObject:@"Djamel Mesbah"];
+    [players addObject:@"Mehdi Mostefa"];
+    [players addObject:@"Nabil Bentaleb"];
+    [players addObject:@"Yasine Brahimi"];
+    [players addObject:@"Medhi Lacen"];
+    [players addObject:@"Saphir Taider"];
+    [players addObject:@"Hassan Yebda"];
+    [players addObject:@"Abdelmoumene Djabou"];
+    [players addObject:@"Sofiane Feghouli"];
+    [players addObject:@"Nabil Ghilas"];
+    [players addObject:@"Riyad Mahrez"];
+    [players addObject:@"Islam Slimani"];
+    [players addObject:@"Hilal Soudani"];
+    
+    return players;
+}
+
+- (NSMutableArray *) addArgentinaPlayers {
+    NSMutableArray * players = [[NSMutableArray alloc] init];
+    
+    [players addObject:@"Sergio Romero"];
+    [players addObject:@"Mariano Andujar"];
+    [players addObject:@"Agustin Orion"];
+    [players addObject:@"Pablo Zabaleta"];
+    [players addObject:@"Federico Fernandez"];
+    [players addObject:@"Ezequiel Garay"];
+    [players addObject:@"Marcos Rojo"];
+    [players addObject:@"Hugo Campagnaro"];
+    [players addObject:@"Martin Demichelis"];
+    [players addObject:@"Jose Basanta"];
+    [players addObject:@"Javier Mascherano"];
+    [players addObject:@"Fernando Gago"];
+    [players addObject:@"Lucas Biglia"];
+    [players addObject:@"Ricardo Alvarez"];
+    [players addObject:@"Augusto Fernandez"];
+    [players addObject:@"Angel Di Maria"];
+    [players addObject:@"Maxi Rodriguez"];
+    [players addObject:@"Enzo Perez"];
+    [players addObject:@"Lionel Messi"];
+    [players addObject:@"Gonzalo Higuain"];
+    [players addObject:@"Sergio Aguero"];
+    [players addObject:@"Rodrigo Palacio"];
+    [players addObject:@"Ezequiel Lavezzi "];
     
     return players;
 }
@@ -307,7 +382,7 @@
 
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView {
     [self receiveTeamIndex];
-    [self.pickerViewGolderPlayer selectRow:0 inComponent:0 animated:YES];
+    [self.pickerViewGoldenPlayer reloadAllComponents];
 }
 
 - (void) receiveTeamIndex {

@@ -22,6 +22,6 @@
 
 @property (nonatomic) NSString * labelPlacarGame1;
 
-- (AASMatchesGroupsTableViewCell *) callGroupsTableViewCell : (UITableView *) tableView andSimpleTableIdentifier : (NSString *) simpleTableIdentifier andIndexRow : (NSInteger) row andFlags : (NSMutableArray *) flags andLabelGroup : (NSString *) labelGroup andFlagsGamePath : (NSMutableArray *) flagsGamePath;
+- (AASMatchesGroupsTableViewCell *) callGroupsTableViewCell : (UITableView *) tableView andSimpleTableIdentifier : (NSString *) simpleTableIdentifier andIndexRow : (NSInteger) row andFlags : (NSMutableArray *) flags andIdentifier: (NSArray *) identifiers andLabelGroup : (NSString *) labelGroup andFlagsGamePath : (NSMutableArray *) flagsGamePath andDates: (NSArray *) gameDate;
 
 @end

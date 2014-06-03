@@ -16,7 +16,7 @@
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *toolbarAddValue;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *toolbarChooseValue;
 
-@property (nonatomic, retain) UIPickerView *pickerViewGolderPlayer;
+@property (nonatomic, retain) UIPickerView *pickerViewGoldenPlayer;
 
 @property (weak, nonatomic) IBOutlet UITextView *textViewTitle;
 

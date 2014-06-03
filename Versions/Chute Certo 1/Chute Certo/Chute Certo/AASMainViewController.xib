@@ -7,12 +7,14 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AASMainViewController">
             <connections>
                 <outlet property="scrollViewMain" destination="ylV-sp-OBy" id="sdl-yN-6lV"/>
+                <outlet property="tableViewMenu" destination="Ecs-ot-9Tc" id="aZ8-f4-f0Q"/>
                 <outlet property="toolbarHomeValue" destination="IqO-Tk-gye" id="Wpf-nk-2X8"/>
                 <outlet property="toolbarMainTitle" destination="OeX-u2-Cf3" id="FXC-nw-tky"/>
                 <outlet property="toolbarManageKicksValue" destination="Tf2-mZ-9FK" id="tKm-aw-4Bi"/>
                 <outlet property="toolbarProfileValue" destination="pEl-2d-SnZ" id="H8k-sP-liV"/>
                 <outlet property="toolbarRankingValue" destination="32n-VW-WWv" id="fug-2Z-kcA"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewMenu" destination="vTz-v4-8VC" id="NCL-At-p4D"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -29,28 +31,28 @@
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                     <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
                     <items>
-                        <barButtonItem image="manager icon" id="Tf2-mZ-9FK">
+                        <barButtonItem image="manager kicks icon" id="Tf2-mZ-9FK">
                             <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="toolbarManageKicksAction:" destination="-1" id="Ieo-9Y-Y4k"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="Mwi-8n-bMR"/>
-                        <barButtonItem image="home icon" id="IqO-Tk-gye">
+                        <barButtonItem image="home" id="IqO-Tk-gye">
                             <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="toolbarHomeAction:" destination="-1" id="9pj-Qd-Dy0"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="n6x-th-mdw"/>
-                        <barButtonItem image="trophy icon" id="32n-VW-WWv">
+                        <barButtonItem image="trophy ranking icon" id="32n-VW-WWv">
                             <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="toolbarRankingAction:" destination="-1" id="e6b-hL-d0w"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="JTi-Qx-k5c"/>
-                        <barButtonItem image="profile icon" id="pEl-2d-SnZ">
+                        <barButtonItem image="male profile icon" id="pEl-2d-SnZ">
                             <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="toolbarProfileAction:" destination="-1" id="uEi-Q6-Xcr"/>
@@ -63,6 +65,12 @@
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                     <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
                     <items>
+                        <barButtonItem image="reveal-icon" id="gmM-rv-Y19">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
+                            <connections>
+                                <action selector="toolbarMenuAction:" destination="-1" id="S7v-QP-Po2"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="m6r-EU-TGf"/>
                         <barButtonItem title="Chute Certo" id="OeX-u2-Cf3">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -71,6 +79,22 @@
                     </items>
                     <color key="barTintColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
                 </toolbar>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vTz-v4-8VC" userLabel="Menu View">
+                    <rect key="frame" x="0.0" y="44" width="258" height="480"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Ecs-ot-9Tc">
+                            <rect key="frame" x="0.0" y="0.0" width="258" height="480"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="4CB-gs-EVG"/>
+                                <outlet property="delegate" destination="-1" id="Usq-kP-ZWk"/>
+                            </connections>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
@@ -78,9 +102,10 @@
         </view>
     </objects>
     <resources>
-        <image name="home icon" width="32" height="32"/>
-        <image name="manager icon" width="32" height="32"/>
-        <image name="profile icon" width="32" height="32"/>
-        <image name="trophy icon" width="32" height="32"/>
+        <image name="home" width="32" height="32"/>
+        <image name="male profile icon" width="42" height="42"/>
+        <image name="manager kicks icon" width="32" height="32"/>
+        <image name="reveal-icon" width="22" height="17"/>
+        <image name="trophy ranking icon" width="32" height="32"/>
     </resources>
 </document>

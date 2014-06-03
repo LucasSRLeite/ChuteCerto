@@ -41,21 +41,22 @@
     [self showGameDetails : YES];
 }
 
-- (IBAction)buttonMatchTwoAction:(UIButton *)sender {
-    [self showGameDetails : NO];
-}
-
 - (void) showGameDetails : (BOOL) isMatchOne {
     AASMatchGameViewController * viewController = [[AASMatchGameViewController alloc] init];
     viewController.labelGroupText = self.labelGroup;
+    viewController.flagOneImagePath = self.flagOneImagePath;
+    viewController.flagTwoImagePath = self.flagTwoImagePath;
+    viewController.flagThreeImagePath = self.flagThreeImagePath;
+    viewController.flagFourImagePath = self.flagFourImagePath;
+    viewController.team1 = [self.segmentedControlGame1 titleForSegmentAtIndex:0];
+    viewController.team2 = [self.segmentedControlGame1 titleForSegmentAtIndex:2];
+    viewController.team3 = [self.segmentedControlGame2 titleForSegmentAtIndex:0];
+    viewController.team4 = [self.segmentedControlGame2 titleForSegmentAtIndex:2];
+    
     if (isMatchOne) {
-        viewController.flagOneImagePath = self.flagOneImagePath;
-        viewController.flagTwoImagePath = self.flagTwoImagePath;
         self.isGame1Detailed = YES;
         viewController.isGame1Detailed = self.isGame1Detailed;
     } else {
-        viewController.flagOneImagePath = self.flagThreeImagePath;
-        viewController.flagTwoImagePath = self.flagFourImagePath;
         self.isGame2Detailed = YES;
         viewController.isGame2Detailed = self.isGame2Detailed;
     }
