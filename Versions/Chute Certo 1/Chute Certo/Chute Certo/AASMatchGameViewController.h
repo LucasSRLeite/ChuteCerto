@@ -10,9 +10,9 @@
 
 @interface AASMatchGameViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource, UIScrollViewDelegate>
 
-@property int scoreOne, scoreTwo;
+@property int gameChosen, scoreOne, scoreTwo;
 
-@property (nonatomic) NSMutableArray * dataList;
+//static NSMutableDictionary * dataList;
 
 @property (nonatomic) BOOL isGame1Detailed;
 @property (nonatomic) BOOL isGame2Detailed;
@@ -37,6 +37,8 @@
 @property (nonatomic) NSString * flagTwoImagePath;
 @property (nonatomic) NSString * flagThreeImagePath;
 @property (nonatomic) NSString * flagFourImagePath;
+
++ (NSMutableDictionary *) getDataList;
 
 - (IBAction)toolbarCancelAction:(UIBarButtonItem *)sender;
 - (IBAction)toolbarKickAction:(UIBarButtonItem *)sender;

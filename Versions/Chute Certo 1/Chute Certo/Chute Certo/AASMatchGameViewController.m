@@ -20,7 +20,13 @@
 
 @implementation AASMatchGameViewController
 
+static NSMutableDictionary *dataList;
+
 #pragma mark - ViewController Methods
+
++ (NSMutableDictionary *) getDataList{
+    return dataList;
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -34,6 +40,7 @@
     
     self.scoreOne = 0;
     self.scoreTwo = 0;
+    self.gameChosen = 1;
     
     self.pickerViewTeamOne = [self createPickerView : self.pickerViewTeamOne
                                             andRect : CGRectMake(50, 240, 50, 162.0)];
@@ -148,10 +155,10 @@
 
 - (IBAction)toolbarKickAction:(UIBarButtonItem *)sender {
     AASMainViewController * viewController = [[AASMainViewController alloc] init];
-
+    
     NSString *path = [NSHomeDirectory() stringByAppendingString:@"/dados.plist"];
     
-    NSLog(@"%@", path);
+    NSLog(@"AppDir: %@", path);
 
     viewController.scoreOne = self.scoreOne;
     viewController.scoreTwo = self.scoreTwo;
@@ -166,23 +173,23 @@
     
     viewController.indexScrollToView = 1;
     
-    NSError *error;
-    
-    self.dataList = [[NSMutableArray alloc]initWithContentsOfFile:path];
-    
-    if (!self.dataList) {
-        NSLog(@"%@", self.labelGroupText);
-        self.dataList = [[NSMutableArray alloc]init];
+    if (!dataList) {
+        dataList = [[NSMutableDictionary alloc]initWithContentsOfFile:path];
+        
+        if(!dataList){
+            dataList = [[NSMutableDictionary alloc]init];
+        }
     }
+
+    NSLog(@"%@", dataList);
     
-    NSMutableDictionary *dados = [[NSMutableDictionary alloc]init];
+    NSString *dados = [NSString stringWithFormat:@"%d%d%d", self.gameChosen, self.scoreOne, self.scoreTwo];
     
-    [dados setObject:[NSString stringWithFormat: @"%d X %d", self.scoreOne, self.scoreTwo] forKey:self.labelGroupText];
+    [dataList setObject:dados forKey:self.labelGroupText];
     
-    [self.dataList addObject:dados];
-    [self.dataList writeToFile:path atomically:YES];
+    [dataList writeToFile:path atomically:YES];
     
-    NSLog(@"%@", self.dataList);
+    NSLog(@"%@", dataList);
     
     [[[[UIApplication sharedApplication] delegate] window] setRootViewController:viewController];
 }
@@ -193,9 +200,11 @@
     if (self.scrollView.contentOffset.x == 0) {
         self.labelTeam1.text = self.team1;
         self.labelTeam2.text = self.team2;
+        self.gameChosen = 1;
     } else if (self.scrollView.contentOffset.x == self.view.bounds.size.width) {
         self.labelTeam1.text = self.team3;
         self.labelTeam2.text = self.team4;
+        self.gameChosen = 2;
     }
 }
 

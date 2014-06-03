@@ -144,43 +144,76 @@
 - (AASMatchesGroupsTableViewCell *) callGroupsTableViewCell : (UITableView *) tableView andSimpleTableIdentifier : (NSString *) simpleTableIdentifier andIndexRow : (NSInteger) row andFlags : (NSMutableArray *) flags andIdentifier: (NSArray *) identifiers andLabelGroup : (NSString *) labelGroup andFlagsGamePath : (NSMutableArray *) flagsGamePath andDates: (NSArray *) gameDate{
     AASMatchesGroupsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     
-    if (!self.isGame1Detailed) {
+    NSDictionary *dados = [AASMatchGameViewController getDataList];
+    
+    if ([dados objectForKey:labelGroup]) {
+        
+        if([[dados objectForKey:labelGroup] characterAtIndex:0] == '1'){
+            cell.segmentedControlGame1.hidden = YES;
+            cell.viewScore1.hidden = NO;
+            
+            cell.segmentedControlGame2.hidden = NO;
+            cell.viewScore2.hidden = YES;
+            
+            cell.labelScoreTeamOne.text = [NSString stringWithFormat:@"%c", [[dados objectForKey:labelGroup] characterAtIndex:1]];
+            cell.labelScoreTeamTwo.text = [NSString stringWithFormat:@"%c", [[dados objectForKey:labelGroup] characterAtIndex:2]];
+        }else if([[dados objectForKey:labelGroup] characterAtIndex:0] == '2'){
+            cell.segmentedControlGame2.hidden = YES;
+            cell.viewScore2.hidden = NO;
+            
+            cell.segmentedControlGame1.hidden = NO;
+            cell.viewScore1.hidden = YES;
+            
+            cell.labelScoreTeamThree.text = [NSString stringWithFormat:@"%c", [[dados objectForKey:labelGroup] characterAtIndex:1]];
+            cell.labelScoreTeamFour.text = [NSString stringWithFormat:@"%c", [[dados objectForKey:labelGroup] characterAtIndex:2]];
+        }
+        
+//        if (!self.isGame1Detailed) {
+//            cell.segmentedControlGame1.hidden = NO;
+//            cell.viewScore1.hidden = YES;
+//        } else {
+//            cell.isGame1Detailed = self.isGame1Detailed;
+//            cell.scoreOne = self.scoreOne;
+//            cell.labelScoreTeamOne.text = [NSString stringWithFormat: @"%d", self.scoreOne];
+//            cell.labelScoreTeamOne.hidden = NO;
+//        
+//            cell.scoreTwo = self.scoreTwo;
+//            cell.labelScoreTeamTwo.text = [NSString stringWithFormat: @"%d", self.scoreTwo];
+//            cell.labelScoreTeamTwo.hidden = NO;
+//        
+//            cell.viewScore1.hidden = NO;
+//            cell.segmentedControlGame1.hidden = YES;
+//        }
+//        if (!self.isGame2Detailed) {
+//            cell.segmentedControlGame2.hidden = NO;
+//            cell.viewScore2.hidden = YES;
+//        } else {
+//            cell.isGame2Detailed = self.isGame2Detailed;
+//            cell.scoreThree = self.scoreOne;
+//            cell.labelScoreTeamThree.text = [NSString stringWithFormat: @"%d", self.scoreOne];
+//            cell.labelScoreTeamFour.hidden = NO;
+//        
+//            cell.scoreFour = self.scoreTwo;
+//            cell.labelScoreTeamFour.text = [NSString stringWithFormat: @"%d", self.scoreTwo];
+//            cell.labelScoreTeamFour.hidden = NO;
+//        
+//            cell.viewScore2.hidden = NO;
+//            cell.segmentedControlGame2.hidden = YES;
+//        }
+    }else{
         cell.segmentedControlGame1.hidden = NO;
         cell.viewScore1.hidden = YES;
-    } else {
-        cell.isGame1Detailed = self.isGame1Detailed;
-        cell.scoreOne = self.scoreOne;
-        cell.labelScoreTeamOne.text = [NSString stringWithFormat: @"%d", self.scoreOne];
-        cell.labelScoreTeamOne.hidden = NO;
         
-        cell.scoreTwo = self.scoreTwo;
-        cell.labelScoreTeamTwo.text = [NSString stringWithFormat: @"%d", self.scoreTwo];
-        cell.labelScoreTeamTwo.hidden = NO;
-        
-        cell.viewScore1.hidden = NO;
-        cell.segmentedControlGame1.hidden = YES;
-    }
-    if (!self.isGame2Detailed) {
         cell.segmentedControlGame2.hidden = NO;
         cell.viewScore2.hidden = YES;
-    } else {
-        cell.isGame2Detailed = self.isGame2Detailed;
-        cell.scoreThree = self.scoreOne;
-        cell.labelScoreTeamThree.text = [NSString stringWithFormat: @"%d", self.scoreOne];
-        cell.labelScoreTeamFour.hidden = NO;
-        
-        cell.scoreFour = self.scoreTwo;
-        cell.labelScoreTeamFour.text = [NSString stringWithFormat: @"%d", self.scoreTwo];
-        cell.labelScoreTeamFour.hidden = NO;
-        
-        cell.viewScore2.hidden = NO;
-        cell.segmentedControlGame2.hidden = YES;
     }
     
     cell.imageFlagOne.image = [UIImage imageNamed:flags[0]];
     cell.imageFlagTwo.image = [UIImage imageNamed:flags[1]];
     cell.imageFlagThree.image = [UIImage imageNamed:flags[2]];
     cell.imageFlagFour.image = [UIImage imageNamed:flags[3]];
+    
+    
     
     cell.flagOneImagePath = flagsGamePath[0];
     cell.flagTwoImagePath = flagsGamePath[1];
@@ -196,14 +229,10 @@
     cell.labelTeamOne.font = font;
     cell.labelTeamTwo.text = [identifiers objectAtIndex:1];
     cell.labelTeamTwo.font = font;
-    cell.labelTeamThree.text = [identifiers objectAtIndex:2];
+    cell.labelTeamThree.text = [identifiers objectAtIndex:3];
     cell.labelTeamFour.font = font;
-    cell.labelTeamFour.text = [identifiers objectAtIndex:3];
+    cell.labelTeamFour.text = [identifiers objectAtIndex:2];
     cell.labelTeamFour.font = font;
-    
-    if (row%2 == 0) {
-        cell.backgroundColor = [UIColor grayColor];
-    }
     
     [cell.segmentedControlGame1 setTitle:[identifiers objectAtIndex:0] forSegmentAtIndex:0];
     [cell.segmentedControlGame1 setTitle:[identifiers objectAtIndex:1] forSegmentAtIndex:2];
