@@ -25,6 +25,10 @@ static NSMutableDictionary *dataList;
 #pragma mark - ViewController Methods
 
 + (NSMutableDictionary *) getDataList{
+    if (!dataList) {
+        NSString *path = [NSString stringWithFormat:@"%@/Documents/dados.plist", NSHomeDirectory()];
+        dataList = [[NSMutableDictionary alloc]initWithContentsOfFile:path];
+    }
     return dataList;
 }
 
@@ -156,7 +160,7 @@ static NSMutableDictionary *dataList;
 - (IBAction)toolbarKickAction:(UIBarButtonItem *)sender {
     AASMainViewController * viewController = [[AASMainViewController alloc] init];
     
-    NSString *path = [NSHomeDirectory() stringByAppendingString:@"/dados.plist"];
+    NSString *path = [NSString stringWithFormat:@"%@/Documents/dados.plist", NSHomeDirectory()];
     
     NSLog(@"AppDir: %@", path);
 
